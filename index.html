@@ -6,220 +6,71 @@
   <title>沖縄家族旅行 2026 🌺</title>
   <style>
     :root {
-      --blue: #0099cc;
-      --lightblue: #e0f4fb;
-      --coral: #ff6b6b;
-      --green: #4caf82;
-      --yellow: #ffc85a;
-      --gray: #f5f7fa;
-      --dark: #2c3e50;
-      --text: #444;
+      --blue: #0099cc; --lightblue: #e0f4fb; --coral: #ff6b6b;
+      --green: #4caf82; --yellow: #ffc85a; --gray: #f5f7fa; --dark: #2c3e50; --text: #444;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Helvetica Neue', 'Hiragino Sans', 'Meiryo', sans-serif;
-      background: var(--gray);
-      color: var(--text);
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    /* ヘッダー */
-    header {
-      background: linear-gradient(135deg, #006fa6, #00bcd4);
-      color: white;
-      text-align: center;
-      padding: 36px 20px 28px;
-    }
+    body { font-family: 'Helvetica Neue','Hiragino Sans','Meiryo',sans-serif; background: var(--gray); color: var(--text); font-size: 15px; line-height: 1.7; }
+    header { background: linear-gradient(135deg,#006fa6,#00bcd4); color: white; text-align: center; padding: 36px 20px 28px; }
     header h1 { font-size: 1.8em; letter-spacing: 0.05em; margin-bottom: 6px; }
     header p { font-size: 0.95em; opacity: 0.9; }
-    .badge-row {
-      display: flex; flex-wrap: wrap; justify-content: center;
-      gap: 8px; margin-top: 14px;
-    }
-    .badge {
-      background: rgba(255,255,255,0.2);
-      border-radius: 20px;
-      padding: 4px 14px;
-      font-size: 0.85em;
-    }
-
-    /* ナビ */
-    nav {
-      display: flex; flex-wrap: wrap; justify-content: center;
-      background: white;
-      border-bottom: 2px solid var(--lightblue);
-      gap: 0;
-      position: sticky; top: 0; z-index: 100;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--blue);
-      font-size: 0.85em;
-      font-weight: bold;
-      padding: 10px 14px;
-      border-bottom: 3px solid transparent;
-      transition: border-color 0.2s;
-    }
+    .badge-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 14px; }
+    .badge { background: rgba(255,255,255,0.2); border-radius: 20px; padding: 4px 14px; font-size: 0.85em; }
+    nav { display: flex; flex-wrap: wrap; justify-content: center; background: white; border-bottom: 2px solid var(--lightblue); position: sticky; top: 0; z-index: 100; }
+    nav a { text-decoration: none; color: var(--blue); font-size: 0.85em; font-weight: bold; padding: 10px 12px; border-bottom: 3px solid transparent; transition: border-color 0.2s; }
     nav a:hover { border-bottom-color: var(--blue); }
-
-    /* メインコンテンツ */
     main { max-width: 800px; margin: 0 auto; padding: 20px 16px 60px; }
-
-    /* カード */
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-      margin-bottom: 20px;
-      overflow: hidden;
-    }
-    .card-header {
-      padding: 14px 20px;
-      display: flex; align-items: center; gap: 10px;
-      font-weight: bold; font-size: 1.05em;
-    }
+    .card { background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); margin-bottom: 20px; overflow: hidden; }
+    .card-header { padding: 14px 20px; display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 1.05em; }
     .card-body { padding: 16px 20px; }
-
-    /* セクションタイトル */
-    .section-title {
-      font-size: 1.1em; font-weight: bold;
-      color: var(--dark);
-      margin: 28px 0 12px;
-      padding-left: 12px;
-      border-left: 4px solid var(--blue);
-    }
-
-    /* 色テーマ */
-    .day1 { background: linear-gradient(90deg, #ff6b6b, #ff9a5c); color: white; }
-    .day2 { background: linear-gradient(90deg, #0099cc, #00bcd4); color: white; }
-    .day3 { background: linear-gradient(90deg, #4caf82, #81c784); color: white; }
-    .info { background: linear-gradient(90deg, #7c6af0, #a78bfa); color: white; }
-    .note { background: linear-gradient(90deg, #ffc85a, #ffd97d); color: white; }
-    .todo { background: linear-gradient(90deg, #e53935, #ef5350); color: white; }
-
-    /* タイムライン */
+    .section-title { font-size: 1.1em; font-weight: bold; color: var(--dark); margin: 28px 0 12px; padding-left: 12px; border-left: 4px solid var(--blue); }
+    .day1 { background: linear-gradient(90deg,#ff6b6b,#ff9a5c); color: white; }
+    .day2 { background: linear-gradient(90deg,#0099cc,#00bcd4); color: white; }
+    .day3 { background: linear-gradient(90deg,#4caf82,#81c784); color: white; }
+    .info { background: linear-gradient(90deg,#7c6af0,#a78bfa); color: white; }
+    .note { background: linear-gradient(90deg,#ffc85a,#ffd97d); color: white; }
+    .todo { background: linear-gradient(90deg,#e53935,#ef5350); color: white; }
     .timeline { list-style: none; padding: 0; }
-    .timeline li {
-      display: flex;
-      gap: 12px;
-      padding: 8px 0;
-      border-bottom: 1px solid #f0f0f0;
-    }
+    .timeline li { display: flex; gap: 12px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
     .timeline li:last-child { border-bottom: none; }
-    .time {
-      min-width: 72px;
-      font-weight: bold;
-      color: var(--blue);
-      font-size: 0.9em;
-      padding-top: 1px;
-    }
+    .time { min-width: 72px; font-weight: bold; color: var(--blue); font-size: 0.9em; padding-top: 1px; }
     .event { flex: 1; }
     .event-title { font-weight: bold; color: var(--dark); }
-    .event-note {
-      font-size: 0.82em;
-      color: #888;
-      margin-top: 2px;
-    }
-    .tag {
-      display: inline-block;
-      font-size: 0.75em;
-      padding: 1px 8px;
-      border-radius: 10px;
-      margin-right: 4px;
-      font-weight: bold;
-    }
+    .event-note { font-size: 0.82em; color: #888; margin-top: 2px; }
+    .tag { display: inline-block; font-size: 0.75em; padding: 1px 8px; border-radius: 10px; margin-right: 4px; font-weight: bold; }
     .tag-sea { background: #e0f4fb; color: #0077aa; }
     .tag-food { background: #fff3e0; color: #e65100; }
     .tag-hotel { background: #e8f5e9; color: #2e7d32; }
     .tag-car { background: #f3e5f5; color: #6a1b9a; }
     .tag-event { background: #fce4ec; color: #880e4f; }
-    .tag-save { background: #fff8e1; color: #f57f17; }
-
-    /* テーブル */
     table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
-    th {
-      background: var(--lightblue);
-      padding: 8px 12px;
-      text-align: left;
-      font-weight: bold;
-      color: var(--dark);
-      border-bottom: 2px solid #b3e0f2;
-    }
-    td {
-      padding: 8px 12px;
-      border-bottom: 1px solid #f0f0f0;
-      vertical-align: top;
-    }
+    th { background: var(--lightblue); padding: 8px 12px; text-align: left; font-weight: bold; color: var(--dark); border-bottom: 2px solid #b3e0f2; }
+    td { padding: 8px 12px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
     tr:last-child td { border-bottom: none; }
     tr:nth-child(even) td { background: #fafbfc; }
-
-    /* チェックリスト */
     .checklist { list-style: none; padding: 0; }
-    .checklist li {
-      display: flex; align-items: flex-start; gap: 10px;
-      padding: 6px 0;
-      border-bottom: 1px solid #f0f0f0;
-      font-size: 0.9em;
-    }
+    .checklist li { display: flex; align-items: flex-start; gap: 10px; padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.9em; }
     .checklist li:last-child { border-bottom: none; }
     .check-icon { font-size: 1.1em; min-width: 20px; }
-    .status-done { color: #4caf50; }
-    .status-todo { color: #ff5722; }
-    .status-warn { color: #ff9800; }
-
-    /* 連絡先 */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-    @media (max-width: 500px) { .contact-grid { grid-template-columns: 1fr; } }
-    .contact-card {
-      background: var(--gray);
-      border-radius: 8px;
-      padding: 12px;
-      font-size: 0.88em;
-    }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media(max-width:500px){ .contact-grid { grid-template-columns: 1fr; } }
+    .contact-card { background: var(--gray); border-radius: 8px; padding: 12px; font-size: 0.88em; }
     .contact-card h4 { font-size: 0.9em; color: var(--dark); margin-bottom: 4px; }
     .contact-card .phone { font-weight: bold; color: var(--blue); font-size: 1em; }
     .contact-card .address { color: #888; font-size: 0.82em; margin-top: 2px; }
-
-    /* アラート */
-    .alert {
-      border-radius: 8px;
-      padding: 12px 16px;
-      margin: 10px 0;
-      font-size: 0.88em;
-      display: flex;
-      gap: 8px;
-      align-items: flex-start;
-    }
+    .alert { border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-size: 0.88em; display: flex; gap: 8px; align-items: flex-start; }
     .alert-warn { background: #fff8e1; border-left: 4px solid #ffc107; }
     .alert-info { background: #e3f2fd; border-left: 4px solid #2196f3; }
     .alert-success { background: #e8f5e9; border-left: 4px solid #4caf50; }
-
-    /* フッター */
-    footer {
-      text-align: center;
-      padding: 24px;
-      font-size: 0.8em;
-      color: #aaa;
-      background: white;
-      border-top: 1px solid #eee;
-    }
-
-    /* モバイル対応 */
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.4em; }
-      .time { min-width: 58px; font-size: 0.82em; }
-      nav a { padding: 8px 10px; font-size: 0.78em; }
-    }
+    .hotel-feature { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+    .feature-chip { background: #e3f2fd; color: #1565c0; font-size: 0.78em; padding: 2px 10px; border-radius: 12px; }
+    .feature-chip.warn { background: #fff3e0; color: #e65100; }
+    .feature-chip.done { background: #e8f5e9; color: #2e7d32; }
+    footer { text-align: center; padding: 24px; font-size: 0.8em; color: #aaa; background: white; border-top: 1px solid #eee; }
+    @media(max-width:600px){ header h1 { font-size: 1.4em; } .time { min-width: 58px; font-size: 0.82em; } nav a { padding: 8px 10px; font-size: 0.78em; } }
   </style>
 </head>
 <body>
-
-<!-- ヘッダー -->
 <header>
   <h1>🌺 沖縄家族旅行 2026</h1>
   <p>令和8年 7月28日（火）〜 7月30日（木）　2泊3日</p>
@@ -230,415 +81,152 @@
     <span class="badge">🏖️ 海・体験・グルメ</span>
   </div>
 </header>
-
-<!-- ナビゲーション -->
 <nav>
-  <a href="#overview">概要</a>
-  <a href="#day1">Day 1</a>
-  <a href="#day2">Day 2</a>
-  <a href="#day3">Day 3</a>
-  <a href="#hotels">宿泊先</a>
-  <a href="#contacts">連絡先</a>
-  <a href="#todo">TODO</a>
+  <a href="#overview">概要</a><a href="#day1">Day1</a><a href="#day2">Day2</a>
+  <a href="#day3">Day3</a><a href="#hotels">宿泊先</a><a href="#contacts">連絡先</a><a href="#todo">TODO</a>
 </nav>
-
 <main>
 
-  <!-- 旅行概要 -->
   <div id="overview" class="section-title">📋 旅行概要</div>
-  <div class="card">
-    <div class="card-body">
-      <table>
-        <tr><th>期間</th><td>2026年7月28日（火）〜 7月30日（木）　2泊3日</td></tr>
-        <tr><th>メンバー</th><td>夫婦（36歳）＋ 娘3人（高3・中1・小4）　計5名</td></tr>
-        <tr><th>到着便</th><td>7/28（火）10:55 那覇空港 着</td></tr>
-        <tr><th>出発便</th><td>7/30（木）19:45 那覇空港 発</td></tr>
-        <tr><th>移動手段</th><td>レンタカー（スカイレンタカー 那覇空港店）</td></tr>
-        <tr><th>レンタカー</th><td>7/28 11:30 借出 ／ 7/30 18:00 返却　※空港↔店舗送迎あり</td></tr>
-      </table>
-    </div>
-  </div>
+  <div class="card"><div class="card-body">
+    <table>
+      <tr><th>期間</th><td>2026年7月28日（火）〜 7月30日（木）　2泊3日</td></tr>
+      <tr><th>メンバー</th><td>夫婦（36歳）＋ 娘3人（高3・中1・小4）　計5名</td></tr>
+      <tr><th>到着便</th><td>7/28（火）10:55 那覇空港 着</td></tr>
+      <tr><th>出発便</th><td>7/30（木）19:45 那覇空港 発</td></tr>
+      <tr><th>レンタカー</th><td>スカイレンタカー 那覇空港店 ／ 7/28 11:30借出・7/30 18:00返却　※空港↔店舗送迎あり</td></tr>
+    </table>
+  </div></div>
 
-  <!-- Day 1 -->
   <div id="day1" class="section-title">📅 Day 1　7月28日（火）</div>
   <div class="card">
     <div class="card-header day1">🌴 到着日 ─ おきなわワールド → アメリカンヴィレッジ</div>
-    <div class="card-body">
-      <ul class="timeline">
-        <li>
-          <span class="time">10:55</span>
-          <div class="event">
-            <div class="event-title">✈️ 那覇空港 到着</div>
-            <div class="event-note">荷物受け取り後、スカイレンタカー送迎へ</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">11:30</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-car">🚗 車</span>スカイレンタカー 借出</div>
-            <div class="event-note">那覇空港店 ／ 手続き後12:00頃出発</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">12:00〜</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-food">🍱 昼食</span>昼食（節約）</div>
-            <div class="event-note">南部エリアで軽めに済ませる</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">13:00〜16:00</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-event">🌋 観光</span>おきなわワールド</div>
-            <div class="event-note">玉泉洞・エイサー・琉球文化体験など</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">16:30〜17:00</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-car">🚗 移動</span>北谷・ホテルへ移動</div>
-            <div class="event-note">南部 → 北谷 約40分</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">17:00</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-hotel">🏨 泊</span>phoenix琉球・平安山原 チェックイン</div>
-            <div class="event-note">チェックイン 15:00〜 ／ チェックアウト 翌11:00まで</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">18:00〜22:00</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-food">🍽️ 夕食</span>アメリカンヴィレッジ 散策・夕食</div>
-            <div class="event-note">サンセットビュー／沖縄グルメ ほどほどに</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">22:00〜</span>
-          <div class="event">
-            <div class="event-title">🏨 ホテル戻り・就寝</div>
-          </div>
-        </li>
-      </ul>
-    </div>
+    <div class="card-body"><ul class="timeline">
+      <li><span class="time">10:55</span><div class="event"><div class="event-title">✈️ 那覇空港 到着</div><div class="event-note">荷物受け取り後、スカイレンタカー送迎へ</div></div></li>
+      <li><span class="time">11:30</span><div class="event"><div class="event-title"><span class="tag tag-car">🚗</span>スカイレンタカー 借出</div><div class="event-note">那覇空港店 ／ 手続き後12:00頃出発</div></div></li>
+      <li><span class="time">12:00〜</span><div class="event"><div class="event-title"><span class="tag tag-food">🍱</span>昼食（節約）</div><div class="event-note">南部エリアで軽めに</div></div></li>
+      <li><span class="time">13:00〜16:00</span><div class="event"><div class="event-title"><span class="tag tag-event">🌋</span>おきなわワールド</div><div class="event-note">玉泉洞・エイサー・琉球文化体験など</div></div></li>
+      <li><span class="time">16:30〜17:00</span><div class="event"><div class="event-title"><span class="tag tag-car">🚗</span>北谷・ホテルへ移動</div><div class="event-note">南部 → 北谷 約40分</div></div></li>
+      <li><span class="time">17:00</span><div class="event"><div class="event-title"><span class="tag tag-hotel">🏨</span>phoenix琉球・平安山原 チェックイン</div><div class="event-note">現地払い 26,500円 ／ 駐車場 1,000円</div></div></li>
+      <li><span class="time">18:00〜22:00</span><div class="event"><div class="event-title"><span class="tag tag-food">🍽️</span>アメリカンヴィレッジ 散策・夕食</div><div class="event-note">サンセットビュー ／ ほどほどに</div></div></li>
+    </ul></div>
   </div>
 
-  <!-- Day 2 -->
   <div id="day2" class="section-title">📅 Day 2　7月29日（水）</div>
   <div class="card">
     <div class="card-header day2">🌊 海の日 ─ 瀬底ビーチ → 古宇利大橋 → 民謡ディナー</div>
-    <div class="card-body">
-      <ul class="timeline">
-        <li>
-          <span class="time">〜10:00</span>
-          <div class="event">
-            <div class="event-title">🌅 アメリカンヴィレッジ 朝散策</div>
-            <div class="event-note">人が少なく写真映え◎ ／ 朝食（節約）</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">10:30〜11:00</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-hotel">🏨 OUT</span>phoenix琉球 チェックアウト</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">11:00〜12:00</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-car">🚗 移動</span>瀬底ビーチへ出発</div>
-            <div class="event-note">北谷 → 瀬底　約80分</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">12:00〜13:00</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-food">🍱 昼食</span>昼食（節約・瀬底周辺）</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">13:00〜16:00</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-sea">🏖️ 海</span>瀬底ビーチ 海水浴</div>
-            <div class="event-note">白砂・高透明度・本島屈指のビーチ</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">16:00〜16:45</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-event">🌉 観光</span>古宇利大橋 観光・写真撮影</div>
-            <div class="event-note">瀬底から約20分 ／ 絶景の海上橋</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">16:45〜17:30</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-car">🚗 移動</span>ユイマール恩納１へ移動</div>
-            <div class="event-note">古宇利 → 恩納村　約50分</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">17:30</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-hotel">🏨 泊</span>ユイマール恩納１ チェックイン</div>
-            <div class="event-note">チェックイン 15:00〜20:00 ／ チェックアウト 翌11:00まで</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">18:30〜21:00</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-food">🎵 夕食</span>民謡ディナー（三線ライブ）</div>
-            <div class="event-note">三線の花 or ぱいかじ恩納本店 ／ ホテル無料送迎あり（要予約）</div>
-          </div>
-        </li>
-      </ul>
-    </div>
+    <div class="card-body"><ul class="timeline">
+      <li><span class="time">〜10:00</span><div class="event"><div class="event-title">🌅 アメリカンヴィレッジ 朝散策</div><div class="event-note">朝食（節約）</div></div></li>
+      <li><span class="time">10:30〜11:00</span><div class="event"><div class="event-title"><span class="tag tag-hotel">🏨</span>phoenix琉球 チェックアウト</div></div></li>
+      <li><span class="time">11:00〜12:00</span><div class="event"><div class="event-title"><span class="tag tag-car">🚗</span>瀬底ビーチへ出発</div><div class="event-note">北谷 → 瀬底　約80分</div></div></li>
+      <li><span class="time">12:00〜13:00</span><div class="event"><div class="event-title"><span class="tag tag-food">🍱</span>昼食（節約・瀬底周辺）</div></div></li>
+      <li><span class="time">13:00〜16:00</span><div class="event"><div class="event-title"><span class="tag tag-sea">🏖️</span>瀬底ビーチ 海水浴</div><div class="event-note">白砂・高透明度・本島屈指のビーチ</div></div></li>
+      <li><span class="time">16:00〜16:45</span><div class="event"><div class="event-title"><span class="tag tag-event">🌉</span>古宇利大橋 観光・写真撮影</div><div class="event-note">瀬底から約20分 ／ 絶景の海上橋</div></div></li>
+      <li><span class="time">16:45〜17:30</span><div class="event"><div class="event-title"><span class="tag tag-car">🚗</span>ユイマール恩納１へ移動</div><div class="event-note">古宇利 → 恩納村　約50分</div></div></li>
+      <li><span class="time">17:30</span><div class="event"><div class="event-title"><span class="tag tag-hotel">🏨</span>ユイマール恩納１ チェックイン</div><div class="event-note">リモートチェックイン ／ 15:00〜20:00</div></div></li>
+      <li><span class="time">18:30〜21:00</span><div class="event"><div class="event-title"><span class="tag tag-food">🎵</span>民謡ディナー（三線ライブ）</div><div class="event-note">三線の花 or ぱいかじ恩納本店 ／ 無料送迎（要予約）</div></div></li>
+    </ul></div>
   </div>
 
-  <!-- Day 3 -->
   <div id="day3" class="section-title">📅 Day 3　7月30日（木）</div>
   <div class="card">
-    <div class="card-header day3">🪂 最終日 ─ アンダギー → 海中道路 → パラセーリング → 帰路</div>
-    <div class="card-body">
-      <ul class="timeline">
-        <li>
-          <span class="time">〜11:00</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-hotel">🏨 OUT</span>ユイマール恩納１ チェックアウト</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">11:00〜12:00</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-car">🚗 移動</span>うるま市へ移動</div>
-            <div class="event-note">恩納 → うるま市石川　約60〜70分</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">12:00〜12:30</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-food">🍩 立寄</span>Fu-Mi おばさんのアンダギー</div>
-            <div class="event-note">うるま市石川 ／ ※事前電話予約必須（2〜3日前）／ 日曜定休</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">12:30〜13:00</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-event">🚗 観光</span>海中道路 ドライブ</div>
-            <div class="event-note">うるま市 ／ 全長5kmの絶景海上道路</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">13:10</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-sea">🪂 体験</span>パラセーリング（Marine Island）</div>
-            <div class="event-note">屋慶名港集合 13:10 ／ 3人乗りタンデム ／ ※要予約</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">〜15:00</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-car">🚗 移動</span>那覇へ移動</div>
-            <div class="event-note">うるま → 那覇　約50〜60分 ／ お土産・昼食も検討</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">18:00</span>
-          <div class="event">
-            <div class="event-title"><span class="tag tag-car">🚗 返却</span>スカイレンタカー 返却</div>
-            <div class="event-note">那覇空港店 ／ 送迎バスで空港へ</div>
-          </div>
-        </li>
-        <li>
-          <span class="time">19:45</span>
-          <div class="event">
-            <div class="event-title">✈️ 那覇空港 出発</div>
-          </div>
-        </li>
-      </ul>
-    </div>
+    <div class="card-header day3">🪂 最終日 ─ アンダギー → 海中道路 → パラセーリング</div>
+    <div class="card-body"><ul class="timeline">
+      <li><span class="time">〜11:00</span><div class="event"><div class="event-title"><span class="tag tag-hotel">🏨</span>ユイマール恩納１ チェックアウト</div></div></li>
+      <li><span class="time">11:00〜12:00</span><div class="event"><div class="event-title"><span class="tag tag-car">🚗</span>うるま市へ移動</div><div class="event-note">恩納 → うるま市石川　約60〜70分</div></div></li>
+      <li><span class="time">12:00〜12:30</span><div class="event"><div class="event-title"><span class="tag tag-food">🍩</span>Fu-Mi おばさんのアンダギー</div><div class="event-note">うるま市石川 ／ ※事前電話必須（2〜3日前）／ 日曜定休</div></div></li>
+      <li><span class="time">12:30〜13:00</span><div class="event"><div class="event-title"><span class="tag tag-event">🚗</span>海中道路 ドライブ</div><div class="event-note">全長5kmの絶景海上道路</div></div></li>
+      <li><span class="time">13:10</span><div class="event"><div class="event-title"><span class="tag tag-sea">🪂</span>パラセーリング（Marine Island）</div><div class="event-note">屋慶名港集合 ／ 3人乗りタンデム ／ ※要予約</div></div></li>
+      <li><span class="time">〜15:00</span><div class="event"><div class="event-title"><span class="tag tag-car">🚗</span>那覇へ移動</div><div class="event-note">うるま → 那覇　約50〜60分</div></div></li>
+      <li><span class="time">18:00</span><div class="event"><div class="event-title"><span class="tag tag-car">🚗</span>スカイレンタカー 返却</div><div class="event-note">那覇空港店 ／ 送迎バスで空港へ</div></div></li>
+      <li><span class="time">19:45</span><div class="event"><div class="event-title">✈️ 那覇空港 出発</div></div></li>
+    </ul></div>
   </div>
 
-  <!-- 宿泊先 -->
   <div id="hotels" class="section-title">🏨 宿泊先</div>
-  <div class="card">
-    <div class="card-header info">🏨 ホテル情報</div>
-    <div class="card-body">
+  <div class="card"><div class="card-header info">🏨 ホテル情報</div><div class="card-body">
+
+    <div style="margin-bottom:20px;">
+      <div style="font-weight:bold; font-size:1em; color:#2c3e50; margin-bottom:8px;">🌙 1泊目（7/28）　phoenix琉球・平安山原</div>
       <table>
-        <tr>
-          <th>泊</th>
-          <th>ホテル名</th>
-          <th>チェックイン</th>
-          <th>チェックアウト</th>
-          <th>備考</th>
-        </tr>
-        <tr>
-          <td><strong>1泊目</strong><br>7/28</td>
-          <td><strong>phoenix琉球<br>平安山原</strong><br><small>北谷町（アメリカンヴィレッジ近隣）</small></td>
-          <td>15:00〜</td>
-          <td>〜11:00</td>
-          <td>AV徒歩圏内</td>
-        </tr>
-        <tr>
-          <td><strong>2泊目</strong><br>7/29</td>
-          <td><strong>ユイマール恩納１</strong><br><small>恩納村名嘉真2288-38</small></td>
-          <td>15:00〜20:00</td>
-          <td>〜11:00</td>
-          <td>16,920円（支払済）</td>
-        </tr>
+        <tr><th>住所</th><td>北谷町（アメリカンヴィレッジ近隣）</td></tr>
+        <tr><th>予約</th><td>楽天トラベル</td></tr>
+        <tr><th>料金</th><td>26,500円　<strong style="color:#e53935;">現地決済</strong></td></tr>
+        <tr><th>駐車場</th><td>1,000円／泊</td></tr>
+        <tr><th>チェックイン</th><td>15:00〜</td></tr>
+        <tr><th>チェックアウト</th><td>〜11:00</td></tr>
       </table>
     </div>
-  </div>
 
-  <!-- 連絡先 -->
+    <div>
+      <div style="font-weight:bold; font-size:1em; color:#2c3e50; margin-bottom:8px;">🌙 2泊目（7/29）　ユイマール恩納１</div>
+      <table>
+        <tr><th>住所</th><td>恩納村名嘉真2288-38</td></tr>
+        <tr><th>予約</th><td>Airbnb　<strong style="color:#e53935;">※要返信確認</strong></td></tr>
+        <tr><th>料金</th><td>16,920円　家族カード支払済</td></tr>
+        <tr><th>チェックイン</th><td>15:00〜20:00　<strong>リモートチェックイン</strong></td></tr>
+        <tr><th>チェックアウト</th><td>〜11:00</td></tr>
+      </table>
+      <div class="hotel-feature" style="margin-top:10px;">
+        <span class="feature-chip done">✅ 洗濯機・乾燥機（無料）</span>
+        <span class="feature-chip done">✅ バスタオル・タオルあり</span>
+        <span class="feature-chip done">✅ 歯ブラシあり</span>
+        <span class="feature-chip warn">⚠️ 寝間着なし（要持参）</span>
+      </div>
+    </div>
+
+  </div></div>
+
   <div id="contacts" class="section-title">📞 施設連絡先</div>
-  <div class="card">
-    <div class="card-header note">📞 連絡先一覧</div>
-    <div class="card-body">
-      <div class="contact-grid">
-
-        <div class="contact-card">
-          <h4>🚗 スカイレンタカー 那覇空港店</h4>
-          <div class="phone">098-858-1070（目安）</div>
-          <div class="address">借出 7/28 11:30 ／ 返却 7/30 18:00</div>
-        </div>
-
-        <div class="contact-card">
-          <h4>🏨 phoenix琉球・平安山原</h4>
-          <div class="phone">要確認</div>
-          <div class="address">沖縄県北谷町（1泊目）</div>
-        </div>
-
-        <div class="contact-card">
-          <h4>🏨 ユイマール恩納１</h4>
-          <div class="phone">要確認</div>
-          <div class="address">恩納村名嘉真2288-38（2泊目）</div>
-        </div>
-
-        <div class="contact-card">
-          <h4>🌺 おきなわワールド</h4>
-          <div class="phone">098-949-7421</div>
-          <div class="address">南城市玉城前川1336</div>
-        </div>
-
-        <div class="contact-card">
-          <h4>🪂 Marine Island（パラセーリング）</h4>
-          <div class="phone">098-978-8988</div>
-          <div class="address">うるま市与那城屋慶名 屋慶名港<br>集合 7/30 13:10</div>
-        </div>
-
-        <div class="contact-card">
-          <h4>🍩 Fu-Mi おばさんのアンダギー</h4>
-          <div class="phone">098-965-0578</div>
-          <div class="address">うるま市石川<br>※2〜3日前に要電話 ／ 日曜定休</div>
-        </div>
-
-        <div class="contact-card">
-          <h4>🎵 三線の花</h4>
-          <div class="phone">要確認</div>
-          <div class="address">恩納村<br>ライブ 18:30 / 19:30 / 20:30<br>無料送迎あり（要予約）</div>
-        </div>
-
-        <div class="contact-card">
-          <h4>🎵 ぱいかじ 恩納本店</h4>
-          <div class="phone">098-964-5393</div>
-          <div class="address">恩納村字冨着573-1<br>ライブ 19:00 / 20:00 / 21:00<br>無料送迎あり</div>
-        </div>
-
-      </div>
+  <div class="card"><div class="card-header note">📞 連絡先一覧</div><div class="card-body">
+    <div class="contact-grid">
+      <div class="contact-card"><h4>🚗 スカイレンタカー 那覇空港店</h4><div class="phone">098-858-1070（目安）</div><div class="address">借出 7/28 11:30 ／ 返却 7/30 18:00</div></div>
+      <div class="contact-card"><h4>🏨 phoenix琉球・平安山原</h4><div class="phone">要確認</div><div class="address">北谷町 ／ 1泊目 ／ 現地払い26,500円</div></div>
+      <div class="contact-card"><h4>🏨 ユイマール恩納１</h4><div class="phone">Airbnb経由</div><div class="address">恩納村名嘉真2288-38 ／ ※要返信</div></div>
+      <div class="contact-card"><h4>🌺 おきなわワールド</h4><div class="phone">098-949-7421</div><div class="address">南城市玉城前川1336</div></div>
+      <div class="contact-card"><h4>🪂 Marine Island（パラセ）</h4><div class="phone">098-978-8988</div><div class="address">うるま市屋慶名港 ／ 7/30 13:10集合</div></div>
+      <div class="contact-card"><h4>🍩 Fu-Mi おばさんのアンダギー</h4><div class="phone">098-965-0578</div><div class="address">うるま市石川 ／ 2〜3日前に要電話 ／ 日曜定休</div></div>
+      <div class="contact-card"><h4>🎵 三線の花</h4><div class="phone">要確認</div><div class="address">恩納村 ／ ライブ18:30〜 ／ 無料送迎あり</div></div>
+      <div class="contact-card"><h4>🎵 ぱいかじ 恩納本店</h4><div class="phone">098-964-5393</div><div class="address">恩納村字冨着573-1 ／ ライブ19:00〜 ／ 無料送迎あり</div></div>
     </div>
-  </div>
+  </div></div>
 
-  <!-- TODO -->
-  <div id="todo" class="section-title">✅ やることリスト</div>
-  <div class="card">
-    <div class="card-header todo">✅ 予約・確認事項</div>
-    <div class="card-body">
-      <ul class="checklist">
-        <li>
-          <span class="check-icon status-done">✅</span>
-          <div><strong>スカイレンタカー</strong> 予約済 ／ 7/28 11:30〜7/30 18:00</div>
-        </li>
-        <li>
-          <span class="check-icon status-done">✅</span>
-          <div><strong>1泊目 phoenix琉球・平安山原</strong> 予約済</div>
-        </li>
-        <li>
-          <span class="check-icon status-done">✅</span>
-          <div><strong>2泊目 ユイマール恩納１</strong> 予約済・支払済（16,920円）</div>
-        </li>
-        <li>
-          <span class="check-icon status-warn">⚠️</span>
-          <div><strong>民謡ディナー予約</strong>（三線の花 or ぱいかじ）<br><small>ライブ観覧席の事前予約が必須。早めに連絡を。</small></div>
-        </li>
-        <li>
-          <span class="check-icon status-warn">⚠️</span>
-          <div><strong>Marine Island パラセーリング予約</strong><br><small>7/30 13:10枠 ／ 3人乗りタンデム希望 ／ TEL: 098-978-8988</small></div>
-        </li>
-        <li>
-          <span class="check-icon status-warn">⚠️</span>
-          <div><strong>Fu-Mi おばさんのアンダギー 電話</strong><br><small>2〜3日前に要電話 ／ TEL: 098-965-0578 ／ 日曜定休注意</small></div>
-        </li>
-        <li>
-          <span class="check-icon status-todo">📋</span>
-          <div><strong>おきなわワールド</strong> 入場時間・当日予約確認</div>
-        </li>
-        <li>
-          <span class="check-icon status-todo">📋</span>
-          <div><strong>持ち物準備</strong>（日焼け止め・ラッシュガード・酔い止め等）</div>
-        </li>
-      </ul>
+  <div id="todo" class="section-title">✅ TODOリスト</div>
+  <div class="card"><div class="card-header todo">✅ 予約・確認事項</div><div class="card-body">
+    <ul class="checklist">
+      <li><span class="check-icon">✅</span><div><strong>スカイレンタカー</strong> 予約済 ／ 7/28 11:30〜7/30 18:00</div></li>
+      <li><span class="check-icon">✅</span><div><strong>1泊目 phoenix琉球・平安山原</strong> 楽天トラベル予約済 ／ 現地払い26,500円＋駐車場1,000円</div></li>
+      <li><span class="check-icon">✅</span><div><strong>2泊目 ユイマール恩納１</strong> Airbnb予約済・支払済（16,920円）</div></li>
+      <li><span class="check-icon">⚠️</span><div><strong>Airbnb ホスト返信確認</strong>（ユイマール恩納１）<br><small>リモートチェックイン詳細をホストに確認</small></div></li>
+      <li><span class="check-icon">⚠️</span><div><strong>民謡ディナー予約</strong>（三線の花 or ぱいかじ）<br><small>ライブ観覧席は事前予約必須。早めに連絡を。</small></div></li>
+      <li><span class="check-icon">⚠️</span><div><strong>Marine Island パラセーリング予約</strong><br><small>7/30 13:10枠 ／ 3人乗りタンデム ／ TEL: 098-978-8988</small></div></li>
+      <li><span class="check-icon">⚠️</span><div><strong>Fu-Mi アンダギー 電話</strong>（2〜3日前）<br><small>TEL: 098-965-0578 ／ 日曜定休注意</small></div></li>
+      <li><span class="check-icon">📋</span><div><strong>おきなわワールド</strong> 当日券 or 事前予約確認</div></li>
+    </ul>
+    <div class="alert alert-warn" style="margin-top:12px;"><span>⚠️</span><div>ちぬまん恩納名嘉真店は<strong>2026年2月より休業中</strong>。民謡ディナーは「三線の花」または「ぱいかじ恩納本店」へ。</div></div>
+  </div></div>
 
-      <div class="alert alert-warn" style="margin-top:16px;">
-        <span>⚠️</span>
-        <div>ちぬまん恩納サンセットモール名嘉真店は<strong>2026年2月より休業中</strong>。民謡ディナーは「三線の花」または「ぱいかじ恩納本店」をご利用ください。</div>
-      </div>
-      <div class="alert alert-info">
-        <span>ℹ️</span>
-        <div>パラセーリングは<strong>200m・3人タンデム</strong>希望。海況により変更の可能性あり。子供は未経験のため当日スタッフに確認を。</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 持ち物メモ -->
   <div class="section-title">🎒 持ち物チェック</div>
-  <div class="card">
-    <div class="card-header" style="background:#f5f7fa; color:#444;">🎒 持ち物リスト</div>
-    <div class="card-body">
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; font-size:0.88em;">
-        <div>
-          <strong>🏖️ 海・アクティビティ</strong>
-          <ul style="margin-top:6px; padding-left:18px; color:#555; line-height:2;">
-            <li>水着（全員分）</li>
-            <li>ラッシュガード</li>
-            <li>日焼け止め（強力なもの）</li>
-            <li>サングラス・帽子</li>
-            <li>マリンシューズ</li>
-            <li>ビーチタオル</li>
-            <li>防水バッグ</li>
-          </ul>
-        </div>
-        <div>
-          <strong>🧳 その他必需品</strong>
-          <ul style="margin-top:6px; padding-left:18px; color:#555; line-height:2;">
-            <li>航空券・予約確認書</li>
-            <li>酔い止め薬</li>
-            <li>常備薬・救急セット</li>
-            <li>モバイルバッテリー</li>
-            <li>現金（ATM位置確認）</li>
-            <li>着替え（多め推奨）</li>
-            <li>エコバッグ・お土産袋</li>
-          </ul>
-        </div>
+  <div class="card"><div class="card-header" style="background:#f5f7fa;color:#444;">🎒 持ち物リスト</div><div class="card-body">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:0.88em;">
+      <div><strong>🏖️ 海・アクティビティ</strong>
+        <ul style="margin-top:6px;padding-left:18px;color:#555;line-height:2.1;">
+          <li>水着（全員分）</li><li>ラッシュガード</li><li>日焼け止め（強力なもの）</li>
+          <li>サングラス・帽子</li><li>マリンシューズ</li><li>ビーチタオル</li><li>防水バッグ</li>
+        </ul>
+      </div>
+      <div><strong>🧳 必需品・その他</strong>
+        <ul style="margin-top:6px;padding-left:18px;color:#555;line-height:2.1;">
+          <li>航空券・予約確認書</li><li>酔い止め薬</li><li>常備薬・救急セット</li>
+          <li>モバイルバッテリー</li><li>現金（現地払い分）</li>
+          <li><strong style="color:#e53935;">寝間着（ユイマール提供なし）</strong></li>
+          <li>エコバッグ・お土産袋</li>
+        </ul>
       </div>
     </div>
-  </div>
+  </div></div>
 
 </main>
-
-<footer>
-  🌺 沖縄家族旅行 2026 プランシート ／ 最終更新: 2026年5月
-</footer>
-
+<footer>🌺 沖縄家族旅行 2026 プランシート ／ テーマ①（スタンダード）／ 最終更新: 2026年5月</footer>
 </body>
 </html>
