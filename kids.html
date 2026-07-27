@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>沖縄 旅のしおり｜こども用</title>
+<title>沖縄 旅のしおり｜ジュニア用</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏝️</text></svg>">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
-    font-family: "Hiragino Maru Gothic ProN","Rounded Mplus 1c","メイリオ",sans-serif;
+    font-family: "Hiragino Kaku Gothic ProN","Hiragino Maru Gothic ProN","メイリオ",sans-serif;
     color:#20344a;
     background:
       radial-gradient(circle at 15% 8%, #ffe680 0, transparent 22%),
@@ -22,27 +22,25 @@
   .wrap { max-width:760px; margin:0 auto; }
 
   /* ヘッダー */
-  header {
-    text-align:center; padding:26px 18px 30px; position:relative;
-  }
+  header { text-align:center; padding:26px 18px 30px; position:relative; }
   .badge-top {
     display:inline-block; background:#ff5d73; color:#fff; font-weight:bold;
-    padding:5px 16px; border-radius:999px; font-size:0.9em; letter-spacing:1px;
+    padding:5px 16px; border-radius:999px; font-size:0.9em; letter-spacing:2px;
     box-shadow:0 4px 0 #d43a52; margin-bottom:14px; transform:rotate(-2deg);
   }
   header h1 {
-    font-size:2.5em; font-weight:900; line-height:1.15; color:#0a3d62;
+    font-size:2.4em; font-weight:900; line-height:1.2; color:#0a3d62;
     text-shadow:2px 2px 0 #fff, 4px 4px 0 rgba(255,180,80,.5);
   }
   header h1 .sun { display:inline-block; animation:bob 2.6s ease-in-out infinite; }
-  header .sub { margin-top:12px; font-size:1.05em; font-weight:bold; color:#0a6ea8; }
+  header .sub { margin-top:12px; font-size:1.02em; font-weight:bold; color:#0a6ea8; }
   header .date {
     margin-top:8px; display:inline-block; background:#fff; color:#e6592a;
     font-weight:bold; padding:6px 18px; border-radius:999px;
     box-shadow:0 4px 10px rgba(0,0,0,.1); border:2px dashed #ffb46b;
   }
   .hype {
-    margin:8px auto 0; background:#fffbe6; border:3px dashed #ffcf5c; border-radius:18px;
+    margin:14px auto 0; background:#fffbe6; border:3px dashed #ffcf5c; border-radius:18px;
     padding:12px 16px; max-width:560px; font-weight:bold; color:#d9761f; text-align:center;
   }
 
@@ -51,15 +49,15 @@
   .day-head {
     display:flex; align-items:center; gap:12px;
     color:#fff; padding:14px 18px; border-radius:20px 20px 0 0;
-    font-weight:900; font-size:1.3em; box-shadow:0 4px 0 rgba(0,0,0,.12);
+    font-weight:900; font-size:1.25em; box-shadow:0 4px 0 rgba(0,0,0,.12);
   }
   .day1 .day-head { background:linear-gradient(90deg,#ff9a3c,#ff6f91); }
   .day2 .day-head { background:linear-gradient(90deg,#22b8cf,#3ec6a0); }
   .day3 .day-head { background:linear-gradient(90deg,#7c6cff,#4aa3ff); }
   .day-head .num {
     background:#fff; color:#0a3d62; border-radius:50%; width:44px; height:44px;
-    display:flex; align-items:center; justify-content:center; font-size:0.85em; flex-shrink:0;
-    box-shadow:inset 0 -3px 0 rgba(0,0,0,.1);
+    display:flex; align-items:center; justify-content:center; font-size:0.8em; flex-shrink:0;
+    box-shadow:inset 0 -3px 0 rgba(0,0,0,.1); line-height:1;
   }
   .day-head .num small { display:block; font-size:0.7em; line-height:1; }
   .day-body {
@@ -70,44 +68,42 @@
   /* 予定アイテム */
   .item { display:flex; gap:12px; padding:11px 6px; border-bottom:2px dotted #e4eef3; }
   .item:last-child { border-bottom:none; }
-  .item .emoji {
-    font-size:1.9em; flex-shrink:0; width:46px; text-align:center; line-height:1.3;
-  }
+  .item .emoji { font-size:1.85em; flex-shrink:0; width:46px; text-align:center; line-height:1.3; }
   .item .time {
     font-weight:bold; color:#f0692e; font-size:0.82em; background:#fff2e8;
     padding:1px 9px; border-radius:999px; display:inline-block; margin-bottom:3px;
   }
-  .item .ttl { font-weight:900; font-size:1.08em; color:#173a52; }
+  .item .ttl { font-weight:900; font-size:1.06em; color:#173a52; }
   .item .memo { font-size:0.9em; color:#5a7183; margin-top:2px; }
   .item .point {
     display:inline-block; margin-top:5px; font-size:0.82em; font-weight:bold;
     background:#fff3b0; color:#a9720b; padding:2px 10px; border-radius:8px;
   }
 
-  /* お楽しみ枠（パラセ） */
+  /* お楽しみ枠 */
   .fun {
     margin:14px 4px 4px; border-radius:18px; padding:2px;
     background:linear-gradient(120deg,#ffd93b,#ff6f91,#4aa3ff,#3ec6a0);
     background-size:300% 300%; animation:flow 6s ease infinite;
   }
-  .fun-inner { background:#fff; border-radius:16px; padding:16px; text-align:center; }
+  .fun-inner { background:#fff; border-radius:16px; padding:18px; text-align:center; }
   .fun .flag {
     display:inline-block; background:#ff5d73; color:#fff; font-weight:900;
     padding:5px 18px; border-radius:999px; font-size:0.92em; letter-spacing:1px;
-    box-shadow:0 4px 0 #d43a52; margin-bottom:10px;
+    box-shadow:0 4px 0 #d43a52; margin-bottom:12px;
   }
-  .fun .big { font-size:1.55em; font-weight:900; color:#0a3d62; }
-  .fun .big .kite { display:inline-block; animation:fly 3s ease-in-out infinite; }
+  .fun .big { font-size:1.5em; font-weight:900; color:#0a3d62; }
+  .fun .big .gift { display:inline-block; animation:bob 2.6s ease-in-out infinite; }
   .fun .note {
     margin-top:12px; background:#e8f6ff; border:2px dashed #4aa3ff; border-radius:12px;
     padding:10px 12px; font-weight:bold; color:#0a6ea8;
   }
-  .fun .time2 { margin-top:8px; font-weight:bold; color:#f0692e; }
+  .fun .time2 { margin-top:10px; font-weight:bold; color:#f0692e; }
 
-  /* もちもの・やくそく */
+  /* もちもの・約束 */
   .box { background:#fff; border-radius:20px; padding:18px 16px; margin:24px 0;
          box-shadow:0 8px 22px rgba(20,60,90,.13); }
-  .box h2 { font-size:1.25em; color:#0a3d62; margin-bottom:12px; display:flex; align-items:center; gap:8px; }
+  .box h2 { font-size:1.22em; color:#0a3d62; margin-bottom:12px; display:flex; align-items:center; gap:8px; }
   .chips { display:flex; flex-wrap:wrap; gap:9px; }
   .chip {
     background:#eefaf3; border:2px solid #b8ead0; color:#1f7a52; font-weight:bold;
@@ -124,104 +120,103 @@
   footer .stars { font-size:1.4em; }
 
   @keyframes bob { 0%,100%{transform:translateY(0) rotate(0)} 50%{transform:translateY(-8px) rotate(8deg)} }
-  @keyframes fly { 0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-10px) rotate(6deg)} }
   @keyframes flow { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
   @media (prefers-reduced-motion: reduce){ *{animation:none !important} }
-  @media (max-width:480px){ header h1{font-size:2em} .item .emoji{font-size:1.6em;width:40px} }
+  @media (max-width:480px){ header h1{font-size:2em} .item .emoji{font-size:1.55em;width:40px} }
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <header>
-    <div class="badge-top">★ たびのしおり ★</div>
-    <h1><span class="sun">🌞</span> かぞくで<br>おきなわ大冒険！</h1>
-    <div class="sub">2泊3日 ／ うみ・そら・ぼうけんが まってる！</div>
+    <div class="badge-top">★ 旅のしおり ★</div>
+    <h1><span class="sun">🌞</span> いざ、沖縄へ！<br>2泊3日 満喫プラン</h1>
+    <div class="sub">海・グルメ・絶景・お楽しみ枠…全部やりきる3日間</div>
     <div class="date">📅 2026年 7月28日 → 30日</div>
-    <div class="hype">🏝️ ミッション：沖縄をぜんぶ楽しむ！ たくさん食べて、いっぱい泳いで、空をとぶ！</div>
+    <div class="hype">🏝️ テーマ：食べて、泳いで、遊びつくす。沖縄をまるごと満喫しよう！</div>
   </header>
 
   <!-- DAY 1 -->
   <section class="day day1">
-    <div class="day-head"><span class="num">DAY<small>1</small></span> 沖縄じょうりく！アメリカンビレッジ</div>
+    <div class="day-head"><span class="num">DAY<small>1</small></span> 沖縄上陸！アメリカンビレッジで満喫</div>
     <div class="day-body">
-      <div class="item"><div class="emoji">✈️</div><div><span class="time">10:55</span><div class="ttl">那覇空港（なはくうこう）とうちゃく</div><div class="memo">「いよいよ沖縄だ〜！」まどの外は青い海！</div></div></div>
-      <div class="item"><div class="emoji">🚗</div><div><span class="time">11:30</span><div class="ttl">レンタカーで しゅっぱつ</div><div class="memo">シートベルトを わすれずに！</div></div></div>
-      <div class="item"><div class="emoji">🍜</div><div><span class="time">12:15</span><div class="ttl">沖縄そばで おひるごはん</div><div class="memo">つるつるの めん！沖縄のあじ</div></div></div>
-      <div class="item"><div class="emoji">🛍️</div><div><span class="time">13:40</span><div class="ttl">沖縄パルコシティ</div><div class="memo">大きなショッピングモールで すずむ＆おかいもの</div></div></div>
-      <div class="item"><div class="emoji">🏨</div><div><span class="time">15:35</span><div class="ttl">ホテルにチェックイン</div><div class="memo">エルソルタウン沖縄／にもつを おいて みじたく</div></div></div>
-      <div class="item"><div class="emoji">🏖️</div><div><span class="time">17:30</span><div class="ttl">サンセットビーチで うみあそび！</div><div class="memo">ホテルから すぐ！ゆうやけがキレイなビーチ</div><span class="point">★ワクワク：夕日をバックに写真をとろう📸</span></div></div>
-      <div class="item"><div class="emoji">🌃</div><div><span class="time">19:15</span><div class="ttl">よるのアメリカンビレッジ＆ばんごはん</div><div class="memo">かんらんしゃがピカピカ光る！アメリカみたいな街</div></div></div>
+      <div class="item"><div class="emoji">✈️</div><div><span class="time">10:55</span><div class="ttl">那覇空港 到着</div><div class="memo">いよいよ沖縄！ここから3日間がスタート</div></div></div>
+      <div class="item"><div class="emoji">🚗</div><div><span class="time">11:30</span><div class="ttl">レンタカーで出発</div><div class="memo">シートベルトを締めてGO</div></div></div>
+      <div class="item"><div class="emoji">🍜</div><div><span class="time">12:15</span><div class="ttl">沖縄そばで昼食</div><div class="memo">コシのある沖縄そば。まずは沖縄の味から</div></div></div>
+      <div class="item"><div class="emoji">🛍️</div><div><span class="time">13:40</span><div class="ttl">沖縄パルコシティ</div><div class="memo">大型ショッピングモールで買い物＆涼む</div></div></div>
+      <div class="item"><div class="emoji">🏨</div><div><span class="time">15:35</span><div class="ttl">ホテルにチェックイン</div><div class="memo">エルソルタウン沖縄／荷物を置いて身支度</div></div></div>
+      <div class="item"><div class="emoji">🏖️</div><div><span class="time">17:30</span><div class="ttl">サンセットビーチで海水浴</div><div class="memo">ホテルからすぐ。夕日がきれいな人気ビーチ</div><span class="point">★夕日をバックに写真を撮ろう📸</span></div></div>
+      <div class="item"><div class="emoji">🌃</div><div><span class="time">19:15</span><div class="ttl">夜のアメリカンビレッジ＆夕食</div><div class="memo">観覧車がライトアップ。アメリカンな街並みを散策</div></div></div>
     </div>
   </section>
 
   <!-- DAY 2 -->
   <section class="day day2">
-    <div class="day-head"><span class="num">DAY<small>2</small></span> 絶景ビーチ＆三線（さんしん）ライブ</div>
+    <div class="day-head"><span class="num">DAY<small>2</small></span> 絶景ビーチ＆三線ライブ</div>
     <div class="day-body">
-      <div class="item"><div class="emoji">🌅</div><div><span class="time">〜10:00</span><div class="ttl">あさ さんぽ</div><div class="memo">ホテルを チェックアウトする日。わすれものチェック！</div></div></div>
-      <div class="item"><div class="emoji">🌮</div><div><span class="time">11:00</span><div class="ttl">タコライスで おひるごはん</div><div class="memo">「きじむなぁ」の オムタコが めいぶつ！ふわふわ卵</div></div></div>
-      <div class="item"><div class="emoji">🌉</div><div><span class="time">13:05</span><div class="ttl">古宇利大橋（こうりおおはし）</div><div class="memo">海の上を まっすぐ走る 長い橋！りょうがわ 青い海</div><span class="point">★ワクワク：まるで海の上をドライブ🚗💨</span></div></div>
-      <div class="item"><div class="emoji">🏖️</div><div><span class="time">14:10</span><div class="ttl">瀬底（せそこ）ビーチ ＝ 本日のメイン！</div><div class="memo">とうめいな海！魚が見えるかも。たっぷり泳ごう</div><span class="point">★ワクワク：シュノーケルで お魚さがし🐠</span></div></div>
-      <div class="item"><div class="emoji">🎵</div><div><span class="time">19:30</span><div class="ttl">三線（さんしん）ライブで ばんごはん</div><div class="memo">沖縄の楽器の 生えんそう！手びょうしで もりあがろう</div></div></div>
+      <div class="item"><div class="emoji">🌅</div><div><span class="time">〜10:00</span><div class="ttl">朝の散策・チェックアウト</div><div class="memo">ホテルを出る日。忘れ物チェックを忘れずに</div></div></div>
+      <div class="item"><div class="emoji">🌮</div><div><span class="time">11:00</span><div class="ttl">タコライスで昼食</div><div class="memo">「きじむなぁ」の名物オムタコ（ふわふわ卵×タコライス）</div></div></div>
+      <div class="item"><div class="emoji">🌉</div><div><span class="time">13:05</span><div class="ttl">古宇利大橋（こうりおおはし）</div><div class="memo">海の上をまっすぐ貫く絶景の橋</div><span class="point">★両側が真っ青な海！</span></div></div>
+      <div class="item"><div class="emoji">🏖️</div><div><span class="time">14:10</span><div class="ttl">瀬底（せそこ）ビーチ ＝ 本日のメイン</div><div class="memo">透明度バツグン。魚が見えるかも。たっぷり泳ごう</div><span class="point">★シュノーケルで魚さがし🐠</span></div></div>
+      <div class="item"><div class="emoji">🎵</div><div><span class="time">19:30</span><div class="ttl">三線（さんしん）ライブで夕食</div><div class="memo">沖縄の民謡を生演奏で。手拍子で盛り上がろう</div></div></div>
     </div>
   </section>
 
   <!-- DAY 3 -->
   <section class="day day3">
-    <div class="day-head"><span class="num">DAY<small>3</small></span> 空をとぶ！ラストは海中道路</div>
+    <div class="day-head"><span class="num">DAY<small>3</small></span> 最終日 ─ 海中道路＆お楽しみ枠</div>
     <div class="day-body">
-      <div class="item"><div class="emoji">🍩</div><div><span class="time">12:10</span><div class="ttl">サーターアンダギー</div><div class="memo">沖縄の あげドーナツ！あげたては サクサク</div></div></div>
-      <div class="item"><div class="emoji">🌊</div><div><span class="time">12:40</span><div class="ttl">海中道路（かいちゅうどうろ）ドライブ</div><div class="memo">海の中を くるまで はしる 5kmの道！左右はぜんぶ海</div><span class="point">★ワクワク：海の上の道でドライブ🌊</span></div></div>
+      <div class="item"><div class="emoji">🍩</div><div><span class="time">12:10</span><div class="ttl">サーターアンダギー</div><div class="memo">沖縄風の揚げドーナツ。揚げたては格別</div></div></div>
+      <div class="item"><div class="emoji">🌊</div><div><span class="time">12:40</span><div class="ttl">海中道路（かいちゅうどうろ）ドライブ</div><div class="memo">海の中を貫く約5kmの道。左右は一面の海</div><span class="point">★海の上を走る爽快ドライブ</span></div></div>
 
-      <!-- お楽しみ枠：パラセ -->
+      <!-- お楽しみ枠 -->
       <div class="fun">
         <div class="fun-inner">
           <div class="flag">🎉 お楽しみ枠 🎉</div>
-          <div class="big"><span class="kite">🪂</span> パラセーリングで 空をとぶ！</div>
+          <div class="big"><span class="gift">🎁</span> 当日のお楽しみ！</div>
           <div class="time2">⏰ 14:20 集合（屋慶名港・やけなこう）</div>
-          <div class="note">👙 水着など、ぬれてもいい服で来てね！<br>タオル・日焼け止めも わすれずに ☀️</div>
+          <div class="note">👙 水着など濡れても良い服装で来てね<br>タオル・日焼け止めも忘れずに ☀️</div>
         </div>
       </div>
 
-      <div class="item" style="margin-top:12px;"><div class="emoji">🛍️</div><div><span class="time">16:20</span><div class="ttl">おみやげ タイム</div><div class="memo">おうちの人や 友だちに 沖縄のおみやげを えらぼう</div></div></div>
-      <div class="item"><div class="emoji">✈️</div><div><span class="time">19:45</span><div class="ttl">那覇空港から バイバイ沖縄！</div><div class="memo">たくさんの思い出を もって おうちへ</div></div></div>
+      <div class="item" style="margin-top:12px;"><div class="emoji">🛍️</div><div><span class="time">16:20</span><div class="ttl">おみやげタイム</div><div class="memo">家族や友だちへ、沖縄みやげを選ぼう</div></div></div>
+      <div class="item"><div class="emoji">✈️</div><div><span class="time">19:45</span><div class="ttl">那覇空港から出発</div><div class="memo">思い出をいっぱい持って帰ろう</div></div></div>
     </div>
   </section>
 
   <!-- もちもの -->
   <div class="box">
-    <h2>🎒 わすれちゃダメ！もちもの</h2>
+    <h2>🎒 忘れちゃダメ！持ち物</h2>
     <div class="chips">
       <span class="chip">👙 水着</span>
-      <span class="chip">🩴 ぬれてもいい服</span>
+      <span class="chip">🩴 濡れてもいい服</span>
       <span class="chip">🧴 日焼け止め</span>
-      <span class="chip">🧢 ぼうし</span>
+      <span class="chip">🧢 帽子</span>
       <span class="chip">🕶️ サングラス</span>
       <span class="chip">🏖️ ビーチタオル</span>
-      <span class="chip">👕 きがえ</span>
-      <span class="chip">🛌 ねまき</span>
-      <span class="chip">💧 すいとう</span>
-      <span class="chip">💊 よいどめ</span>
-      <span class="chip">😄 元気！</span>
+      <span class="chip">👕 着替え</span>
+      <span class="chip">🛌 寝間着</span>
+      <span class="chip">💧 水筒</span>
+      <span class="chip">💊 酔い止め</span>
+      <span class="chip">🔋 モバイルバッテリー</span>
     </div>
   </div>
 
-  <!-- おやくそく -->
+  <!-- 約束 -->
   <div class="box">
-    <h2>🤙 みんなの おやくそく</h2>
+    <h2>🤙 みんなの約束</h2>
     <ul class="rules">
-      <li><span class="n">①</span>のどが かわく前に、こまめに 水をのむ！（ねっちゅうしょう注意）</li>
-      <li><span class="n">②</span>日焼け止めを ぬる。海のあとも ぬりなおす☀️</li>
-      <li><span class="n">③</span>はぐれたら その場で 止まって、おとなに でんわ📞</li>
-      <li><span class="n">④</span>車では かならず シートベルト🚗</li>
-      <li><span class="n">⑤</span>いちばん大事：とことん 楽しむ！🌈</li>
+      <li><span class="n">①</span>こまめに水分補給（熱中症に注意）</li>
+      <li><span class="n">②</span>日焼け止めを塗る。海のあとも塗り直し☀️</li>
+      <li><span class="n">③</span>はぐれたらその場で止まり、大人に連絡📞</li>
+      <li><span class="n">④</span>車では必ずシートベルト🚗</li>
+      <li><span class="n">⑤</span>いちばん大事：全力で楽しむ！🌈</li>
     </ul>
   </div>
 
   <footer>
     <div class="stars">✨🌺✨</div>
-    さいこうの3日間に しよう！<br>沖縄 かぞく旅行 2026
+    最高の3日間にしよう！<br>沖縄 家族旅行 2026
   </footer>
 
 </div>
